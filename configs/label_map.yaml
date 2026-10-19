@@ -1,0 +1,56 @@
+# Label mapping from Flipkart categories to our 3 classes
+# Based on product_category_tree field in the dataset
+
+Apparel:
+  - Clothing
+  - Women's Clothing
+  - Men's Clothing
+  - Kids' Clothing
+  - Lingerie
+  - Sleepwear
+  - Swimwear
+  - Shoes
+  - Footwear
+  - Bags
+  - Accessories
+  - Jewellery
+  - Watches
+  - Sunglasses
+  - Fashion
+  - Beauty
+  - Personal Care
+
+Electronics:
+  - Mobiles
+  - Laptops
+  - Computers
+  - Tablets
+  - Cameras
+  - Televisions
+  - Audio
+  - Speakers
+  - Headphones
+  - Smart Wearables
+  - Electronics
+  - Computer Peripherals
+  - Gaming
+  - Power Banks
+  - Chargers
+  - Cables
+
+Home:
+  - Furniture
+  - Home Decor
+  - Kitchen
+  - Dining
+  - Bedding
+  - Bath
+  - Home Furnishing
+  - Appliances
+  - Home Appliances
+  - Lighting
+  - Garden
+  - Tools
+  - Hardware
+  - Storage
+  - Home

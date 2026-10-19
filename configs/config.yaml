@@ -1,0 +1,47 @@
+# Training configuration
+
+# Data
+data:
+  data_dir: "data"
+  batch_size: 32
+  num_workers: 4
+  image_size: 224
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+# Model
+model:
+  type: "custom"  # Options: custom, mobilenet_v2, resnet18, efficientnet_b0
+  num_classes: 3
+  dropout_rate: 0.5
+  pretrained: true
+  freeze_backbone: false
+
+# Training
+training:
+  epochs: 50
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 10
+  gradient_clip_value: 1.0
+  use_mixed_precision: true
+
+# Scheduler
+scheduler:
+  type: "ReduceLROnPlateau"  # Options: ReduceLROnPlateau, CosineAnnealingLR, StepLR
+  factor: 0.5
+  patience: 5
+  min_lr: 1e-6
+
+# Logging
+logging:
+  log_dir: "outputs"
+  checkpoint_dir: "outputs/checkpoints"
+  figure_dir: "outputs/figures"
+  metrics_dir: "outputs/metrics"
+  save_every: 5
+  log_interval: 10
+
+# Reproducibility
+seed: 42
