@@ -1,0 +1,22 @@
+# Calibration configuration
+
+# Temperature scaling
+temperature_scaling:
+  enabled: true
+  max_epochs: 10
+  learning_rate: 0.01
+
+# Threshold selection
+threshold_selection:
+  target_precision: 0.95  # Target precision for auto-accept
+  method: precision_coverage  # precision_coverage or fixed
+
+# Top-k predictions
+top_k:
+  k: 3  # Number of top predictions to show
+  show_all_probabilities: true
+
+# Calibration persistence
+persistence:
+  save_dir: "outputs/calibration"
+  save_to_checkpoint: true  # Save calibration to model checkpoint

@@ -1,0 +1,24 @@
+# Benchmark configuration
+# This configures the model comparison benchmark
+
+# Models to benchmark
+models:
+  - custom
+  - mobilenet_v2
+  - resnet18
+  - efficientnet_b0
+
+# Training settings (reduced for benchmarking)
+max_epochs: 20
+early_stopping_patience: 5
+batch_size: 32
+
+# Data settings
+use_saved_split: true  # Critical: use identical splits for all models
+
+# Execution settings
+skip_existing: true  # Skip if checkpoint already exists
+device: auto  # auto, cuda, cpu
+
+# Selection metric
+selection_metric: val_f1_macro  # Metric for model selection
